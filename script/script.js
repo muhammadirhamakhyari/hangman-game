@@ -8,7 +8,7 @@ let currentWorld, correctLetter, wrongGuestCount;
 const maxGuesses = 6;
 
 const resetGame = () => {
-    correctLetter =[ ]
+    correctLetter =[]
     wrongGuestCount = 0
     wordDisplay.innerHTML = currentWorld.split('').map(()=>`<li class="letter"></li>`).join('');
     gameModal.classList.remove("show")
@@ -23,7 +23,7 @@ const gameOver = (isVictory)=>{
         gameModal.querySelector('img').src = `images/images/${isVictory?'victory':'lost'}.gif`;
         gameModal.querySelector('h4').innerText = `${isVictory?'Congrast!':'Game Over'}`;
         gameModal.querySelector('p').innerHTML = `${modalText} <b>${currentWorld}</b>`;
-        gameModal.classList.add("show")
+        gameModal.classList.add("show");
     }, 300);
 }
 
@@ -31,7 +31,8 @@ const getRandomWord = () =>{
     //method randam word and hint
     const { hint, word } = wordList[Math.floor(Math.random() * wordList.length)];
     currentWorld = word;
-    console.log(word);    
+    console.log(word);
+    // const arra = [...currentWorld].forEach((e)=>console.log(e));    
     document.querySelector('.hint-text b').innerHTML = hint;    
     resetGame();    
 }

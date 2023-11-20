@@ -19,7 +19,7 @@ body{
     display: flex;
     align-items: flex-end;
     gap: 70px;
-    padding: 60px 40px;
+    padding: 150px 50px 120px;
     border-radius: 10px;
 }
 .hangman-box img{
@@ -152,3 +152,17 @@ body{
         display: none;
     }
 }
+@media (max-width:360px){
+    .container{
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .hangman-box img{
+        max-width: 200px;
+    }
+    .hangman-box h1{
+        display: none;
+    }
+}
+
